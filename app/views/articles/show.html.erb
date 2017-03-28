@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1><br>
+<%= @article.body %>
+
+<br><%= link_to "Edit Article", edit_category_article_path(@article) %>
+
+<br><%= link_to "Delete Article", category_article_path(@article), method: "delete" %>
+

@@ -1,0 +1,6 @@
+<h1>Edit Article</h1>
+<%= form_for :article, url: "/categories/#{@category.id}/articles/#{@article.id},", method: 'put' do |f| %>
+  Title: <%= f.text_field :title, value: @article.title%>
+  Body: <%= f.text_field :body, value: @article.body %>
+  <%= f.submit "Submit" %>
+<% end %>

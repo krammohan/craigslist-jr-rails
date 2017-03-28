@@ -1,0 +1,6 @@
+<h1>New Article</h1>
+<%= form_for :article, url: "/categories/#{@category.id}/articles" do |f| %>
+  Title: <%= f.text_field :title %>
+  Body: <%= f.text_field :body %>
+  <%= f.submit "Submit" %>
+<% end %>

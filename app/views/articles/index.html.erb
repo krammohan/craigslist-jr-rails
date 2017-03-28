@@ -1,6 +1,8 @@
-<%= @category.name %><br>
+<h1><%= @category.name %></h1><br>
   <% @articles.each do |article| %>
-    <%= article.title  %>
+    <%= link_to article.title, category_article_path(@category, article)  %><br>
   <% end %>
-<%= link_to "Create New Article", new_category_articles_path(category), { :action => :create}, :method => :post %>
+<br><%= link_to "Create New Article", new_category_article_path %>
+
+
 
